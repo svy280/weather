@@ -2,12 +2,20 @@ $(function() {
   var handleWeatherResponse = function(data) {
     console.log(data);
 
-    // Put your code here to change the "markup" variable. 
+    // Put your code here to change the "markup" variable.
     // Don't change any other code in this file. You will be sad.
-    
-    var markup = "The weather report... " + "will be here when I finish my homework.";
-    
-    
+
+
+
+
+
+    var markup =  "The current temperature is " + data.currently.apparentTemperature + ". " + "It is " +
+    data.currently.summary + ". " + "Tomorrow is a low of " + data.daily.data[0].apparentTemperatureMin + " and a high of " + data.daily.data[0].apparentTemperatureMax + " with " +data.daily.data[0].summary
+    + " The next day is a low of " + data.daily.data[1].apparentTemperatureMin + " and a high of " + data.daily.data[1].apparentTemperatureMax + " with " + data.daily.data[1].summary + " The day after is a low of "
+    + data.daily.data[2].apparentTemperatureMin + " and a high of " + data.daily.data[2].apparentTemperatureMax + " with " + data.daily.data[2].summary
+
+
+
     // End of your code
 
     $('.weather-report').html(markup);
